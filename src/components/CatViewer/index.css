@@ -1,0 +1,32 @@
+.cat_card{
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 1rem; 
+}
+.cat_card .cat_image {
+  position: relative;
+  text-align: center;
+}
+.cat_card .cat_image > .overlay{
+  width: 100%;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+  cursor: pointer;
+  transition: display 0.5s ease;
+}
+.cat_card .cat_image:hover > .overlay{
+  display: block
+}
+
+.cat_card .cat_image > img{
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: contain
+}
